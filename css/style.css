@@ -1,0 +1,107 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100% !important;
+}
+
+body {
+    background-color: #FBFCFF !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+    margin-top: 125px;
+    text-align: center;
+}
+
+.intro .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #2F2F31;
+}
+
+.intro .description {
+    font-weight: normal;
+    font-size: 14px;
+    width: 261px;
+    margin: 10px auto;
+    color: #6C6C78;
+}
+
+.form {
+    width: 310px;
+    margin: 44px auto;
+}
+
+.form::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.input-group {
+    width: 66px;
+    float: left;
+    margin-right: 14px;
+}
+
+.input-group:last-child {
+    margin-right: 0;
+}
+
+.input-group input[type=number] {
+    width: 66px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px;
+    color: #6C6C78;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #86868D;
+    margin-bottom: 4px;
+}
+
+.output {
+    margin-top: 74px;
+    text-align: center;
+}
+
+.output .output-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2F2F31;
+    margin-bottom: 27px;
+}
+
+.output .output-percent {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.success {
+    color: #23E1AE;
+}
+
+.warning {
+    color: #FECA57;
+}
+
+.danger {
+    color: #EE5253;
+}

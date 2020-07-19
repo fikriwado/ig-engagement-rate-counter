@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hasil lebih akurat menggunakan data dari anda langsung.">
+    <meta name="twitter:title" content="Manualy - Engagement Rate Counter">
+    <meta name="twitter:description" content="Hasil lebih akurat menggunakan data dari anda langsung.">
+    <meta name="twitter:image" content="https://i.ibb.co/Jck4Mhm/Group-7.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Manualy - Engagement Rate Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="intro">
+            <h1 class="title">Engagement Rate</h1>
+            <p class="description">Hasil lebih akurat menggunakan data dari anda langsung</p>
+        </div>
+
+        <form class="form">
+            <div class="input-group">
+                <label for="like">Like</label>
+                <input type="number" id="like" v-model.number="like">
+            </div>
+            <div class="input-group">
+                <label for="comment">Comment</label>
+                <input type="number" id="comment" v-model.number="comment">
+            </div>
+            <div class="input-group">
+                <label for="save">Save</label>
+                <input type="number" id="save" v-model.number="save">
+            </div>
+            <div class="input-group">
+                <label for="reach">Reach</label>
+                <input type="number" id="reach" v-model.number="reach">
+            </div>
+        </form>
+
+        <div class="output" v-if="like !== null && comment !== null && save !== null && reach !== null">
+            <h3 class="output-title">Hasil Perhitungan</h3>
+            <h1 class="output-percent success">{{ realTimePercent }}%</h1>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
