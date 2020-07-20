@@ -27,9 +27,12 @@
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <title>Manualy - Engagement Rate Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -60,11 +63,24 @@
 
         <div class="output" v-if="like !== null && comment !== null && save !== null && reach !== null">
             <h3 class="output-title">Hasil Perhitungan</h3>
-            <h1 class="output-percent success">{{ realTimePercent }}%</h1>
+            <h1 v-if="realTimePercent >= 5" class="output-percent success">{{ realTimePercent }}%</h1>
+            <h1 v-else-if="realTimePercent >= 2 && realTimePercent < 5" class="output-percent warning">
+                {{ realTimePercent }}%</h1>
+            <h1 v-else class="output-percent danger">{{ realTimePercent }}%</h1>
         </div>
+
+        <footer class="footer">
+            <p>
+                <i class="fab fa-instagram"></i>
+            </p>
+            <a href="https://www.instagram.com/fikriwado_/" target="_blank">@fikriwado_</a>
+        </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -104,4 +111,27 @@ body {
 
 .danger {
     color: #EE5253;
+}
+
+.footer {
+    position: absolute;
+    width: 200px;
+    top: 555px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer p {
+    color: #6C6C78;
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.footer a {
+    color: #86868D;
+    font-size: 13px;
+    text-decoration: none;
 }
